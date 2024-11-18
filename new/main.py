@@ -62,10 +62,4 @@ for epoch in range(num_epochs):
 model.save_pretrained("./fine_tuned_gpt2")
 tokenizer.save_pretrained("./fine_tuned_gpt2")
 
-model_path = "/Users/apple/Desktop/cource/llm_chess_model/new/fine_tuned_gpt2"
 
-tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-model = GPT2LMHeadModel.from_pretrained(model_path)
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
